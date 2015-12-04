@@ -7,6 +7,8 @@ import org.joda.time.DateTime
 import scala.util.Random
 
 object Main {
+
+  val sc :SparkContext = configSpark()
   var count : Int = 0;
   var run : Boolean = true;
   def oncePerSecond(callback: () => Unit) {
@@ -56,7 +58,7 @@ object Main {
   def configSpark() : SparkContext = {
     val conf = new SparkConf()
       .set("spark.master","local[4]")
-      .set("spark.executor.memory","1g")
+      .set("spark.executor.memory","2g")
       .set("spark.cassandra.connection.host","127.0.0.1")
       .set("spark.serializer","org.apache.spark.serializer.KryoSerializer")
       .set("spark.eventLog.enabled","true")
@@ -77,5 +79,9 @@ object Main {
     })
     sc.stop
 
+  }
+
+  def fakeRun = {
+    println("Start time: "+Main.sc.startTime)
   }
 }
