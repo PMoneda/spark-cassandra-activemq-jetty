@@ -1,4 +1,4 @@
-name := "TesteSpark"
+name := "SparkCassandraActiveMqJetty"
 
 version := "1.0"
 

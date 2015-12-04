@@ -50,9 +50,7 @@ object Main {
       println("FIM: "+DateTime.now())
     }
 
-    val hello = sc.cassandraTable[(String, String)]("test", "hello")
-    val first = hello.first
-    println(first)
+
   }
 
   def configSpark() : SparkContext = {

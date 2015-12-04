@@ -11,19 +11,18 @@ object TesteSparkBuild extends Build {
   )
 
   lazy val app = Project(
-    "teste-spark",
+    "spark-cassandra-activemq-jetty",
     file("."),
     settings = buildSettings ++ assemblySettings ++ Seq(
       parallelExecution in Test := false,
       libraryDependencies ++= Seq(
         "com.datastax.spark" %% "spark-cassandra-connector" % "1.1.0-alpha3",
-        //"org.apache.activemq" %% "activemq-core" % "5.0.0",
-        // spark will already be on classpath when using spark-submit.
-        // marked as provided, so that it isn't included in assembly.
         "org.apache.spark" %% "spark-catalyst" % "1.1.0" % "provided",
         "org.scalatest" %% "scalatest" % "2.1.5" % "test"
       ),
-      libraryDependencies += "com.google.code.gson" % "gson" % "2.5"
+      libraryDependencies += "com.google.code.gson" % "gson" % "2.5",
+      libraryDependencies += "org.eclipse.jetty" % "jetty-webapp" % "8.1.14.v20131031"
+      //libraryDependencies += "org.eclipse.jetty" % "jetty-plus" % "8.1.14.v20131031"
     )
   )
 }

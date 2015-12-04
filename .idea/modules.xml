@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-cassandra-activemq-jetty.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-cassandra-activemq-jetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-cassandra-activemq-jetty-build.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-cassandra-activemq-jetty-build.iml" />
+    </modules>
+  </component>
+</project>
